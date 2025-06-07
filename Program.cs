@@ -13,15 +13,13 @@ for (int i0 = 0; i0 < jogadas; i0++)
 {
     for (int i1 = surpresinha.GetLowerBound(1); i1 <= surpresinha.GetUpperBound(1); i1++)
     {
-        // Console.WriteLine($"[{i0,i1}] "); ???
+        surpresinha[i0, i1] = gerador.Next(1, 60);
+        Console.Write($"[{surpresinha[i0, i1]}] ");
     }
-    // surpresinha[i, ] = gerador.Next(1, 60);
-
+    Console.WriteLine("");
 }
 
-Array.Sort(surpresinha);
-
-foreach (int surpresa in surpresinha)
-{
-    Console.Write($"[{surpresa}] ");
-}
+// foreach (int surpresa in surpresinha)
+// {
+//     Console.Write($"[{surpresa}] ");
+// }
